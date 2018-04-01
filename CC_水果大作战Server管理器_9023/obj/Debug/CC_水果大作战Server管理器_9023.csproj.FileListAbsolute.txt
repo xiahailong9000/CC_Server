@@ -1,0 +1,15 @@
+D:\XiangMu\CC_Server\CC_水果大作战Server管理器_9023\bin\Debug\CC_水果大作战Server管理器_9023.exe.config
+D:\XiangMu\CC_Server\CC_水果大作战Server管理器_9023\bin\Debug\CC_水果大作战Server管理器_9023.exe
+D:\XiangMu\CC_Server\CC_水果大作战Server管理器_9023\bin\Debug\CC_水果大作战Server管理器_9023.pdb
+D:\XiangMu\CC_Server\CC_水果大作战Server管理器_9023\bin\Debug\CC_ServerDLL.dll
+D:\XiangMu\CC_Server\CC_水果大作战Server管理器_9023\bin\Debug\MySql.Data.dll
+D:\XiangMu\CC_Server\CC_水果大作战Server管理器_9023\bin\Debug\CC_ServerDLL.pdb
+D:\XiangMu\CC_Server\CC_水果大作战Server管理器_9023\obj\Debug\CC_水果大作战Server管理器_9023.csprojResolveAssemblyReference.cache
+D:\XiangMu\CC_Server\CC_水果大作战Server管理器_9023\obj\Debug\CC_水果大作战Server管理器_9023.exe
+D:\XiangMu\CC_Server\CC_水果大作战Server管理器_9023\obj\Debug\CC_水果大作战Server管理器_9023.pdb
+D:\XiangMu\CC_Server\CC_水果大作战Server管理器_9023\bin\C_水果大作战Server管理器\CC_水果大作战Server管理器_9023.exe.config
+D:\XiangMu\CC_Server\CC_水果大作战Server管理器_9023\bin\C_水果大作战Server管理器\CC_水果大作战Server管理器_9023.exe
+D:\XiangMu\CC_Server\CC_水果大作战Server管理器_9023\bin\C_水果大作战Server管理器\CC_水果大作战Server管理器_9023.pdb
+D:\XiangMu\CC_Server\CC_水果大作战Server管理器_9023\bin\C_水果大作战Server管理器\CC_ServerDLL.dll
+D:\XiangMu\CC_Server\CC_水果大作战Server管理器_9023\bin\C_水果大作战Server管理器\MySql.Data.dll
+D:\XiangMu\CC_Server\CC_水果大作战Server管理器_9023\bin\C_水果大作战Server管理器\CC_ServerDLL.pdb

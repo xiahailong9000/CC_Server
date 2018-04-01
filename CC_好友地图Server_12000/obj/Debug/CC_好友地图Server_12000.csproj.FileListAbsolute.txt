@@ -1,0 +1,9 @@
+D:\XiangMu\CC_Server\CC_好友地图Server_12000\bin\Debug\CC_好友地图Server_12000.exe.config
+D:\XiangMu\CC_Server\CC_好友地图Server_12000\bin\Debug\CC_好友地图Server_12000.exe
+D:\XiangMu\CC_Server\CC_好友地图Server_12000\bin\Debug\CC_好友地图Server_12000.pdb
+D:\XiangMu\CC_Server\CC_好友地图Server_12000\bin\Debug\CC_ServerDLL.dll
+D:\XiangMu\CC_Server\CC_好友地图Server_12000\bin\Debug\MySql.Data.dll
+D:\XiangMu\CC_Server\CC_好友地图Server_12000\bin\Debug\CC_ServerDLL.pdb
+D:\XiangMu\CC_Server\CC_好友地图Server_12000\obj\Debug\CC_好友地图Server_12000.csprojResolveAssemblyReference.cache
+D:\XiangMu\CC_Server\CC_好友地图Server_12000\obj\Debug\CC_好友地图Server_12000.exe
+D:\XiangMu\CC_Server\CC_好友地图Server_12000\obj\Debug\CC_好友地图Server_12000.pdb

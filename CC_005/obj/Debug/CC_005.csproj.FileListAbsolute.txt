@@ -1,0 +1,9 @@
+D:\XiangMu\CC_Server\CC_005\bin\Debug\CC_005.exe.config
+D:\XiangMu\CC_Server\CC_005\bin\Debug\CC_005.exe
+D:\XiangMu\CC_Server\CC_005\bin\Debug\CC_005.pdb
+D:\XiangMu\CC_Server\CC_005\obj\Debug\CC_005.csprojResolveAssemblyReference.cache
+D:\XiangMu\CC_Server\CC_005\obj\Debug\CC_005.Form1.resources
+D:\XiangMu\CC_Server\CC_005\obj\Debug\CC_005.Properties.Resources.resources
+D:\XiangMu\CC_Server\CC_005\obj\Debug\CC_005.csproj.GenerateResource.Cache
+D:\XiangMu\CC_Server\CC_005\obj\Debug\CC_005.exe
+D:\XiangMu\CC_Server\CC_005\obj\Debug\CC_005.pdb

@@ -1,0 +1,12 @@
+D:\XiangMu\CC_Server\CC_生成下载配置文件\bin\Debug\CC_生成下载配置文件.exe.config
+D:\XiangMu\CC_Server\CC_生成下载配置文件\bin\Debug\CC_生成下载配置文件.exe
+D:\XiangMu\CC_Server\CC_生成下载配置文件\bin\Debug\CC_生成下载配置文件.pdb
+D:\XiangMu\CC_Server\CC_生成下载配置文件\obj\Debug\CC_生成下载配置文件.csprojResolveAssemblyReference.cache
+D:\XiangMu\CC_Server\CC_生成下载配置文件\obj\Debug\CC_生成下载配置文件.exe
+D:\XiangMu\CC_Server\CC_生成下载配置文件\obj\Debug\CC_生成下载配置文件.pdb
+E:\XiangMu\CC_Server\CC_生成下载配置文件\bin\Debug\CC_生成下载配置文件.exe.config
+E:\XiangMu\CC_Server\CC_生成下载配置文件\obj\Debug\CC_生成下载配置文件.exe
+E:\XiangMu\CC_Server\CC_生成下载配置文件\obj\Debug\CC_生成下载配置文件.pdb
+E:\XiangMu\CC_Server\CC_生成下载配置文件\bin\Debug\CC_生成下载配置文件.exe
+E:\XiangMu\CC_Server\CC_生成下载配置文件\bin\Debug\CC_生成下载配置文件.pdb
+E:\XiangMu\CC_Server\CC_生成下载配置文件\obj\Debug\CC_生成下载配置文件.csprojResolveAssemblyReference.cache

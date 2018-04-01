@@ -1,0 +1,2 @@
+D:\XiangMu\CC_Server\CC_部落大战Server_9001\bin\Debug\CC_部落大战Server_9001.exe.config
+D:\XiangMu\CC_Server\CC_部落大战Server_9001\obj\Debug\CC_部落大战Server_9001.csprojResolveAssemblyReference.cache

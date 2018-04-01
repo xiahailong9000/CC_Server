@@ -1,0 +1,7 @@
+F:\XiangMu\CC_Server\CC_AutoCopy_002\bin\Debug\CC_AutoCopy_002.exe.config
+F:\XiangMu\CC_Server\CC_AutoCopy_002\bin\Debug\CC_AutoCopy_002.exe
+F:\XiangMu\CC_Server\CC_AutoCopy_002\bin\Debug\CC_AutoCopy_002.pdb
+F:\XiangMu\CC_Server\CC_AutoCopy_002\obj\Debug\CC_AutoCopy_002.csprojResolveAssemblyReference.cache
+F:\XiangMu\CC_Server\CC_AutoCopy_002\obj\Debug\CC_AutoCopy_002.csproj.CoreCompileInputs.cache
+F:\XiangMu\CC_Server\CC_AutoCopy_002\obj\Debug\CC_AutoCopy_002.exe
+F:\XiangMu\CC_Server\CC_AutoCopy_002\obj\Debug\CC_AutoCopy_002.pdb
