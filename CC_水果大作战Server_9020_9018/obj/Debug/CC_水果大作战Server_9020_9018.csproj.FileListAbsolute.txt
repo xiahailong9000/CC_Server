@@ -13,3 +13,15 @@ D:\XiangMu\CC_Server\CC_水果大作战Server_9020_9018\bin\C_水果大作战Ser
 D:\XiangMu\CC_Server\CC_水果大作战Server_9020_9018\bin\C_水果大作战Server\CC_ServerDLL.dll
 D:\XiangMu\CC_Server\CC_水果大作战Server_9020_9018\bin\C_水果大作战Server\MySql.Data.dll
 D:\XiangMu\CC_Server\CC_水果大作战Server_9020_9018\bin\C_水果大作战Server\CC_ServerDLL.pdb
+F:\XiangMu\CC_Server\CC_水果大作战Server_9020_9018\bin\C_水果大作战Server\CC_水果大作战Server_9020_9018.exe.config
+F:\XiangMu\CC_Server\CC_水果大作战Server_9020_9018\bin\C_水果大作战Server\CC_水果大作战Server_9020_9018.exe
+F:\XiangMu\CC_Server\CC_水果大作战Server_9020_9018\bin\C_水果大作战Server\CC_水果大作战Server_9020_9018.pdb
+F:\XiangMu\CC_Server\CC_水果大作战Server_9020_9018\bin\C_水果大作战Server\CC_ServerDLL.dll
+F:\XiangMu\CC_Server\CC_水果大作战Server_9020_9018\bin\C_水果大作战Server\MySql.Data.dll
+F:\XiangMu\CC_Server\CC_水果大作战Server_9020_9018\bin\C_水果大作战Server\CC_ServerDLL.pdb
+F:\XiangMu\CC_Server\CC_水果大作战Server_9020_9018\bin\C_水果大作战Server\CC_ServerDLL.dll.config
+F:\XiangMu\CC_Server\CC_水果大作战Server_9020_9018\obj\Debug\CC_水果大作战Server_9020_9018.csprojResolveAssemblyReference.cache
+F:\XiangMu\CC_Server\CC_水果大作战Server_9020_9018\obj\Debug\CC_水果大作战Server_9020_9018.csproj.CoreCompileInputs.cache
+F:\XiangMu\CC_Server\CC_水果大作战Server_9020_9018\obj\Debug\CC_水果大作战Server_9020_9018.csproj.CopyComplete
+F:\XiangMu\CC_Server\CC_水果大作战Server_9020_9018\obj\Debug\CC_水果大作战Server_9020_9018.exe
+F:\XiangMu\CC_Server\CC_水果大作战Server_9020_9018\obj\Debug\CC_水果大作战Server_9020_9018.pdb

@@ -12,9 +12,9 @@ using System.Threading;
 using System.Timers;
 using System.Xml;
 namespace CC_ServerDLL {
-    public delegate void Del_事件();
-    public delegate void Del_Tcp事件(C_TcpClient.C_逻辑端 zmm);
-    public delegate void Del_Tcp事件2(C_TcpClient2.C_逻辑端 zmm);
+    //public delegate void Del_事件();
+    //public delegate void Del_Tcp事件(C_TcpClient.C_逻辑端 zmm);
+    //public delegate void Del_Tcp事件2(C_TcpClient2.C_逻辑端 zmm);
     public class C_TcpClient {
         public TcpClient o_通信对象;
         public m_IP o_IP端口;
@@ -60,8 +60,8 @@ namespace CC_ServerDLL {
         byte o_重连次数 = 5;
         byte o_当前次数 = 0;
         bool z通信是否正常,z是否主动链接;
-        Del_Tcp事件 o_链接成功事件;
-        public C_TcpClient(string zIP, ushort z端口, byte z重连次数, C_逻辑端 z逻辑代码, Del_Tcp事件 z成功事件) {
+        Action<C_逻辑端> o_链接成功事件;
+        public C_TcpClient(string zIP, ushort z端口, byte z重连次数, C_逻辑端 z逻辑代码, Action<C_逻辑端> z成功事件) {
             o_逻辑端 = z逻辑代码.S_克隆对象(this);        
             o_IP端口 = new m_IP(zIP, z端口);
             o_链接成功事件 = z成功事件;
@@ -281,7 +281,7 @@ namespace CC_ServerDLL {
         byte o_重连次数 = 5;
         byte o_当前次数 = 0;
         bool z通信是否正常, z是否主动链接;
-        Del_Tcp事件2 o_链接成功事件;
+        Action<C_逻辑端> o_链接成功事件;
         public static void S_启动监听(int z端口, C_逻辑端 z逻辑代码) {
             Thread o_hh线程 = new Thread(delegate() {
                 try {
@@ -314,7 +314,7 @@ namespace CC_ServerDLL {
             z通信是否正常 = true;
             //C_Toot.S_Debug输出("\n\n\nTcp客户端: " + o_IP端口.O_String + " 已经连接到服务器_______",null, 0);
         }   
-        public C_TcpClient2(string zIP, ushort z端口, byte z重连次数, C_逻辑端 z逻辑代码, Del_Tcp事件2 z成功事件) {
+        public C_TcpClient2(string zIP, ushort z端口, byte z重连次数, C_逻辑端 z逻辑代码, Action<C_逻辑端> z成功事件) {
             o_逻辑端 = z逻辑代码.S_克隆对象(this);
             o_IP端口 = new m_IP(zIP, z端口);
             o_链接成功事件 = z成功事件;

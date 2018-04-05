@@ -7,11 +7,6 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 namespace CC_水果大作战Server_9020_9018 {
-    public enum E_红蓝方阵 {
-        e60_蓝方 = 60,
-        e61_红方 = 61,
-        e62_中立 = 62,
-    }
     public enum ET {
         e_0020管理器心跳 = 20,
         e_0101群组心跳 = 101,
@@ -56,12 +51,12 @@ namespace CC_水果大作战Server_9020_9018 {
     }
     public class C_Main {
         public static C_Main ooo = new C_Main();
-        public C_UdpClient o_Udp通信;
+        public C_UdpClient o_UdpServer;
         static void Main(string[] sss) {
             C_aa数据库.Ooo.S_10分钟刷新库名();
             C_网格Serve.S_启动监听(9020);
             C_TcpClient2.S_启动监听(9018, new C_aa玩家());
-            ooo.o_Udp通信 = C_UdpClient.S_启动监听(9018, C_Udp管理器.S_接口_消息处理);
+            ooo.o_UdpServer = C_UdpClient.S_启动监听(9018, C_Udp管理器.S_接口_消息处理);
             C_网格管理Serve.S_初始化();  
             Thread th = new Thread(delegate() {
                 #region MyRegion----计时事件-----------------
@@ -174,7 +169,11 @@ namespace CC_水果大作战Server_9020_9018 {
     public class C_网格管理Serve:C_TcpClient2.C_逻辑端 {
         public static C_网格管理Serve ooo;
         static string o_域名IP;
+        static bool o_IsUse=false;
         public static void S_初始化() {
+            if (o_IsUse == false) {
+                return;
+            }
             if (ooo == null) {
                 try {
                     IPHostEntry z解析域名 = Dns.GetHostEntry(@"www.aaa9000.com");
@@ -190,6 +189,9 @@ namespace CC_水果大作战Server_9020_9018 {
             }
         }
         static void S_主动链接() {
+            if (o_IsUse == false) {
+                return;
+            }
             Console.WriteLine("网格管理====发送主动链接==网格管理Ser------------" + o_域名IP);
             new C_TcpClient2(o_域名IP, 9023, 0, new C_网格管理Serve(), delegate(C_TcpClient2.C_逻辑端 z逻辑端) {
                 Console.WriteLine("网格管理---主动链接网格_________");
@@ -198,9 +200,15 @@ namespace CC_水果大作战Server_9020_9018 {
             });
         }
         public static void S_30秒_发送心跳() {//z数据用户数量--z等待匹配数量--z在线玩家数量-----
-             ooo.o_通信器.S_发送消息(20, C_网格Serve.o_本机服务器数据);
+            if (o_IsUse == false) {
+                return;
+            }
+            ooo.o_通信器.S_发送消息(20, C_网格Serve.o_本机服务器数据);
         }
         public override void S_接口_消息处理(ushort z消息类型, string msg, byte[] zData) {
+            if (o_IsUse == false) {
+                return;
+            }
             string ss = "";
             string[] sss, sss0;
             switch ((ET)z消息类型) {
@@ -1170,9 +1178,9 @@ namespace CC_水果大作战Server_9020_9018 {
     }
     public class C_Udp管理器 {
         public static Dictionary<IPEndPoint, C_aa玩家> o_地址玩家列表 = new Dictionary<IPEndPoint, C_aa玩家>();
-        public static void S_接口_消息处理(byte[] zData, IPEndPoint z地址) {
+        public static void S_接口_消息处理(C_UdpClient zUdpServer, IPEndPoint z地址, byte[] zData ) {
             if (zData[0] == 10) {
-                C_Main.ooo.o_Udp通信.S_发送消息(zData, z地址);
+                C_Main.ooo.o_UdpServer.S_发送消息(zData, z地址);
                 string ss = Encoding.UTF8.GetString(zData, 1, zData.Length - 1);
                 string[] sss = ss.Split('&');
                 long zID = long.Parse(sss[0]);
@@ -1181,9 +1189,9 @@ namespace CC_水果大作战Server_9020_9018 {
                     mm.o_Ucp地址 = z地址;
                     o_地址玩家列表[z地址] = mm;
                 }
-                C_UdpClient.ooo.S_发送消息(10,C_Toot.S_Get时间搓int() + "", z地址);
+                zUdpServer.S_发送消息(10,C_Toot.S_Get时间搓int() + "", z地址);
             } else if(zData[0] <60) {//连接---------------玩家目录
-                S_广播(zData, z地址);
+                S_广播(zUdpServer,z地址, zData);
                 if (zData[0] == 100 || zData[0] == 101) {
                     //z游戏房间号,& o_雇主.o_自身序号 + "&" + z自身位置.x + "&" + z自身位置.z + "&" + z目标点.x + "&" + z目标点.z
                     try {
@@ -1199,13 +1207,13 @@ namespace CC_水果大作战Server_9020_9018 {
                 }
             }
         }
-        static void S_广播(byte[] zData, IPEndPoint z地址) {
+        static void S_广播(C_UdpClient zUdpServer, IPEndPoint z地址, byte[] zData ) {
             if (o_地址玩家列表.ContainsKey(z地址) == true) {
                 C_aa玩家 mm = o_地址玩家列表[z地址];
                 if (mm.o_游戏房间 != null) {
                     foreach (var n in mm.o_游戏房间.o_玩家列表) {
                         if (n.o_ID > 300 && mm != n) {
-                            C_UdpClient.ooo.S_发送消息(zData, n.o_Ucp地址);
+                            zUdpServer.S_发送消息(zData, n.o_Ucp地址);
                         }
                     }
                 }
