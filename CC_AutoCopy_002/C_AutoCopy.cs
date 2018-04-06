@@ -19,9 +19,10 @@ namespace CC_AutoCopy_002 {
             } else {
                 string[] sss=File.ReadAllText(zConfigPath).Split('@');
                 for(int i = 0; i < sss.Length; i++) {
+                    Console.WriteLine("ddddddddddddd___________" + sss[i]);
                     if (sss[i].Length > 3) {
                         string[] sss2 = sss[i].Split('\n');
-                        if (sss2.Length > 2) {
+                        if (sss2.Length > 1) {
                             o_CopyChainList.Add(new C_CopyChain链(sss2));
                         }
                     }
@@ -41,7 +42,9 @@ namespace CC_AutoCopy_002 {
             public List<C_DirectoryNode> nodeList = new List<C_DirectoryNode>();
             public C_CopyChain链(string[] sss) {
                 rootNode = new C_DirectoryNode(sss[0].Trim());
+                Console.WriteLine("ddddddddddddd_____dd______" + sss[0]);
                 for (int i = 1; i < sss.Length; i++) {
+                    Console.WriteLine("ddddddddddddd________w___" + sss[i]);
                     if (sss[i][0] != '#') {
                         nodeList.Add(new C_DirectoryNode(sss[i].Trim()));
                     }
@@ -64,6 +67,9 @@ namespace CC_AutoCopy_002 {
                     o_Path = zPath;
                     FileInfo[] zmm = new DirectoryInfo(zPath).GetFiles("*.*", SearchOption.AllDirectories);
                     foreach (var n in zmm) {
+                        if (n.FullName.Contains("\\.")) {
+                            continue;
+                        }
                         string zpp = n.FullName.Remove(0, o_Path.Length + 1);
                         o_FileDic[zpp] = Convert.ToInt64((n.LastWriteTime - new DateTime(2018, 1, 1, 8, 0, 0)).TotalSeconds);
                     }
