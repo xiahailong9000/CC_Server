@@ -4,7 +4,6 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace CC_AutoCopy_002 {
     class C_AutoCopy {
         static List<C_CopyChain链> o_CopyChainList = new List<C_CopyChain链>();
@@ -57,7 +56,7 @@ namespace CC_AutoCopy_002 {
                         Console.WriteLine("\n\n");
                     }
                 } else {
-
+                    Console.WriteLine("出错_________dddddd____________");
                 }
             }
             public class C_DirectoryNode {
@@ -65,7 +64,10 @@ namespace CC_AutoCopy_002 {
                 public Dictionary<string, long> o_FileDic = new Dictionary<string, long>();
                 public C_DirectoryNode(string zPath) {
                     o_Path = zPath;
-                    FileInfo[] zmm = new DirectoryInfo(zPath).GetFiles("*.*", SearchOption.AllDirectories);
+                    if (Directory.Exists(o_Path) == false) {
+                        Directory.CreateDirectory(o_Path);
+                    }
+                    FileInfo[] zmm = new DirectoryInfo(o_Path).GetFiles("*.*", SearchOption.AllDirectories);
                     foreach (var n in zmm) {
                         if (n.FullName.Contains("\\.")) {
                             continue;
@@ -73,9 +75,6 @@ namespace CC_AutoCopy_002 {
                         string zpp = n.FullName.Remove(0, o_Path.Length + 1);
                         o_FileDic[zpp] = Convert.ToInt64((n.LastWriteTime - new DateTime(2018, 1, 1, 8, 0, 0)).TotalSeconds);
                     }
-                    //foreach (var n in o_FileDic) {
-                    //    Console.WriteLine(n.Key + "____________" + n.Value);
-                    //}
                 }
                 public void S_FileCompare(C_DirectoryNode zRootNode) {
                     List<string> zUpdateList = new List<string>();
