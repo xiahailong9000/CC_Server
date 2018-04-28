@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 namespace CC_ServerDLL {
    public class C_mysql {
-        public static string o_linq = "Data Source=127.0.0.1; port=3306;UId=root; PWD=Abc132; Charset=gb2312";
+        public static string o_linq = "Data Source=127.0.0.1; port=3306;UId=root; PWD=ASDfgh132; Charset=gb2312";
         //public static string o_linq = "Data Source=192.168.1.46; port=3306;UId=root; PWD=Abc132; Charset=gb2312";
         public static void S_链接信息设置(string zIP,string z端口,string z用户名,string z密码) {
             o_linq = string.Format("Data Source={0}; port={1};UId={2}; PWD={3}; Charset=utf8", zIP,z端口,z用户名,z密码);
